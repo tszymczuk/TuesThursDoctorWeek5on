@@ -10,6 +10,7 @@ public class Doctor {
     }
 
     public void treatPatient(Person patient){
+        System.out.println("-----------------------------------------------------");
         System.out.println("Take two of these and call the office in the morning.");
         patient.getTreated();
     }
