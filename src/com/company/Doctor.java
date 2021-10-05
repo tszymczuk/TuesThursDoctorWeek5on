@@ -15,6 +15,20 @@ public class Doctor {
         patient.getTreated();
     }
 
+    @Override
+    public String toString(){
+        return "Doctor from " + AlmaMater + " who charges $" + fee;
+    }
+
+    @Override
+    public boolean equals(Object other){
+        if (! (other instanceof Doctor))
+            return false;
+        Doctor otherDoctor = (Doctor) other;
+        var isSame = this.fee == otherDoctor.fee && this.AlmaMater == otherDoctor.AlmaMater;
+        return isSame;
+    }
+
     public double billPatient(Person patient){
         patient.payBill(fee);
         return fee;
