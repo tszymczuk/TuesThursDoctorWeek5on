@@ -25,7 +25,7 @@ public class Doctor {
         if (! (other instanceof Doctor))
             return false;
         Doctor otherDoctor = (Doctor) other;
-        var isSame = this.fee == otherDoctor.fee && this.AlmaMater == otherDoctor.AlmaMater;
+        var isSame = this.fee == otherDoctor.fee && this.AlmaMater.equals(otherDoctor.AlmaMater);
         return isSame;
     }
 
